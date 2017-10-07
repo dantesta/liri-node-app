@@ -8,7 +8,7 @@ var searchName = process.argv[3];
 
 
 function readTweets() {
-  var parameters = {screen_name: 'RCBootcampTest', count: 1};
+  var parameters = {screen_name: 'RCBootcampTest', count: 5};
   var requestType = "Tweets";
 
   key.twitterKeys.get('statuses/user_timeline', parameters, function(error, readTweets, respond) {
