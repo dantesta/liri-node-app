@@ -10,6 +10,7 @@ var searchName = process.argv[3];
 function readTweets() {
   var parameters = {screen_name: 'RCBootcampTest', count: 5};
   var requestType = "Tweets";
+  var command = "my-tweets";
 
   key.twitterKeys.get('statuses/user_timeline', parameters, function(error, readTweets, respond) {
 
@@ -33,6 +34,8 @@ function readTweets() {
 function movie() {
   var request = require('request');
   var requestType = "Movie Search";
+  var command = "movie-this";
+
   
   if(!searchName) {
     searchName = "Mr. Nobody";
@@ -67,6 +70,7 @@ function spotify() {
 
   var spotify = require('spotify');
   var requestType = "Search Spotify";
+    var command = "spotify-this-song";
 
 
 
