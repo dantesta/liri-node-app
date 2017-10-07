@@ -10,15 +10,16 @@ var searchName = process.argv[3];
 function readTweets() {
   var parameters = {screen_name: 'RCBootcampTest', count: 5};
   var requestType = "Tweets";
-  var command = "my-tweets";
+
 
   key.twitterKeys.get('statuses/user_timeline', parameters, function(error, readTweets, respond) {
 
     if (error) {
-    	return console.log(error);
+    	console.log(error);
+    	return;
     } 
 
-    for (var i = 0; i < 1; i++) {
+    for (var i = 0; i < 5; i++) {
       result += readTweets[i].created_at + "\n" + readTweets[i].text + "\n";
     }
 
@@ -34,7 +35,7 @@ function readTweets() {
 function movie() {
   var request = require('request');
   var requestType = "Movie Search";
-  var command = "movie-this";
+
 
   
   if(!searchName) {
@@ -70,7 +71,7 @@ function spotify() {
 
   var spotify = require('spotify');
   var requestType = "Search Spotify";
-    var command = "spotify-this-song";
+
 
 
 
@@ -82,7 +83,8 @@ function spotify() {
   spotify.search({ type: 'track', query: searchName }, function(err, data) {
     if (err) {
 
-      return console.log(err);
+      console.log(err);
+      return;
         
     }
 
@@ -93,6 +95,21 @@ function spotify() {
 
   });
 
+}
+
+switch (command) {
+  case "my-tweets":
+    readTweets();
+    break;
+  case "spotify-this-song":
+    spotify();
+    break;
+  case "movie-this":
+    movie();
+    break;
+  case "do-what-it-says":
+    says();
+    break;
 }
 
 
