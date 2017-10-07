@@ -8,11 +8,13 @@ var searchName = process.argv[3];
 
 
 function readTweets() {
-  var parameters = {screen_name: 'RCBootcampTest', count: 5};
+
+
+  var params = {screen_name: 'RCBootcampTest', count: 5};
   
 
 
-  key.twitterKeys.get('statuses/user_timeline', parameters, function(error, readTweets, respond) {
+  client.get('statuses/user_timeline', params, function(error, tweets, respond) {
 
     if (error) {
     	console.log(error);

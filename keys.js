@@ -1,6 +1,6 @@
 var Twitter = require('twitter');
 
-var twitterKeys = {
+var twitterKeys = new Twitter {
   consumer_key: 'uFtiWnWPMUnsH6AAiRDNQo1Z2',
   consumer_secret: 'gMzJhNhRLIhWMRfwACOytRapH0oTs5BWReJ4I9A7LTwFCZDrUH',
   access_token_key: '916479640402882560-Du3gQulRLXcly99u9zuQrPoW88QAq9s',
