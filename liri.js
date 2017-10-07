@@ -23,7 +23,7 @@ function readTweets() {
 
     console.log(result);
 
-    appendLog(requestType);
+
 
   });
 
@@ -54,7 +54,7 @@ function movie() {
       
       console.log(result);
 
-      appendLog(requestType);
+
     }
   })
 }
@@ -86,7 +86,6 @@ function spotify() {
     
     console.log(result);
 
-    appendLog(requestType);
 
   });
 
