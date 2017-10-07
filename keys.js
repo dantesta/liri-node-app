@@ -1,4 +1,4 @@
-
+var Twitter = require('twitter');
 
 var twitterKeys = {
   consumer_key: 'uFtiWnWPMUnsH6AAiRDNQo1Z2',
